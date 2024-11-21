@@ -11,7 +11,7 @@ import linkeIcon from "../../assets/icons/linkedin_icon.png";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#1D1D1D] text-white py-14">
+      <div className="bg-[#1D1D1D] text-white py-14 mt-24">
         <Container>
           <div className="grid grid-cols-2">
             <div className="pr-60">
@@ -36,7 +36,7 @@ const Footer = () => {
                     placeholder="Youe email address"
                     className="p-4 w-48 md:w-[435px] rounded-s-lg"
                   />
-                  <button className="p-4 bg-purple-600 w-48 rounded-e-lg">
+                  <button className="p-4 bg-[#7E53D4] w-48 rounded-e-lg">
                     Subscribe
                   </button>
                 </div>
@@ -69,7 +69,7 @@ const Footer = () => {
         </Container>
       </div>
       {/* copy right */}
-      <div className="bg-purple-500 text-white text-center py-4">
+      <div className="bg-[#7E53D4] text-white text-center py-4">
         <span>© 2024 | We5ive</span>
       </div>
     </>

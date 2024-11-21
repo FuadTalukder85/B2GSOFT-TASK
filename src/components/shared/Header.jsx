@@ -22,7 +22,7 @@ const Header = () => {
           </div>
           <div className="flex items-center gap-5">
             {/* Search */}
-            <div className="flex items-center border rounded-full px-3 py-1 bg-white">
+            <div className="flex items-center border rounded-full px-3 py-2 bg-white">
               <CiSearch className="" />
               <input
                 type="text"

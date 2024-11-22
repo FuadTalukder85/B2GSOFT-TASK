@@ -1,25 +1,21 @@
-import Image from "next/image";
 import img01 from "../../assets/images/newArrival/newArrival01.png";
 import img02 from "../../assets/images/newArrival/newArrival02.png";
 import img03 from "../../assets/images/newArrival/newArrival03.png";
 import img04 from "../../assets/images/newArrival/newArrival04.png";
 import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
-import Container from "../utils/Container";
-import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
 import NewArrivalCard from "../utils/CommonBtn/ReusableCard/ReusableCard";
+import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
+import Image from "next/image";
 
-const FeaturedProduct = () => {
+const RelatedProduct = () => {
   return (
-    <Container>
-      <div className="mt-7">
-        <p className="uppercase text-purple-600">FEATURED PRODUCT</p>
-        <div className="flex justify-between">
-          <p className="font-semibold text-2xl">New Arrivals</p>
-          <div className="flex gap-2">
-            <Image src={leftArrow} alt="leftArrow"></Image>
-            <Image src={rightArrow} alt="rightArrow"></Image>
-          </div>
+    <div className="mt-24">
+      <div className="flex justify-between">
+        <p className="text-2xl font-semibold">Related Products</p>
+        <div className="flex gap-2">
+          <Image src={leftArrow} alt="leftArrow"></Image>
+          <Image src={rightArrow} alt="rightArrow"></Image>
         </div>
       </div>
       <div className="grid grid-cols-4 gap-7 mt-5">
@@ -49,8 +45,8 @@ const FeaturedProduct = () => {
         ></NewArrivalCard>
       </div>
       <SeeMoreBtn>See more</SeeMoreBtn>
-    </Container>
+    </div>
   );
 };
 
-export default FeaturedProduct;
+export default RelatedProduct;

@@ -1,4 +1,5 @@
 .banner-img {
   background-image: url("../../assets/images/heroImg.png");
+  background-repeat: no-repeat;
   background-size: cover;
 }

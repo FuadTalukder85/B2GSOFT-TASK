@@ -9,7 +9,7 @@ import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
 import AddToCartBtn from "../utils/CommonBtn/AddToCartBtn";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
-import ProductCard from "../utils/CommonBtn/ReusableCard/ProductCard";
+import ProductCard from "../utils/ReusableCard/ProductCard";
 
 const BigDeal = () => {
   return (

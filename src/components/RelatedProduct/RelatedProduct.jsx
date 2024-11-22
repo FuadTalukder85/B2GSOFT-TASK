@@ -4,7 +4,7 @@ import img03 from "../../assets/images/newArrival/newArrival03.png";
 import img04 from "../../assets/images/newArrival/newArrival04.png";
 import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
-import NewArrivalCard from "../utils/CommonBtn/ReusableCard/ReusableCard";
+import NewArrivalCard from "../utils/ReusableCard/ReusableCard";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
 import Image from "next/image";
 

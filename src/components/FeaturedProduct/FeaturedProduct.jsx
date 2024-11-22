@@ -7,7 +7,7 @@ import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
 import Container from "../utils/Container";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
-import NewArrivalCard from "../utils/CommonBtn/ReusableCard/ReusableCard";
+import NewArrivalCard from "../utils/ReusableCard/ReusableCard";
 
 const FeaturedProduct = () => {
   return (

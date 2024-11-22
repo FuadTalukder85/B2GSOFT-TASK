@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AddToCartBtn from "../AddToCartBtn";
+import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 
 const ProductCard = ({
   productImg,

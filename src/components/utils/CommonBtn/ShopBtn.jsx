@@ -1,10 +1,10 @@
 import { GoArrowUpRight } from "react-icons/go";
 
-const CommonBtn = ({ children }) => {
+const ShopBtn = () => {
   return (
     <div>
-      <button className="py-2 px-8 font-semibold rounded-full bg-[#7E53D4]">
-        {children}
+      <button className="py-2 px-8 font-semibold rounded-full bg-[#7E53D4] text-white">
+        Shop Now
       </button>
       <button className="rounded-full bg-[#7E53D4] p-3">
         <GoArrowUpRight />
@@ -13,4 +13,4 @@ const CommonBtn = ({ children }) => {
   );
 };
 
-export default CommonBtn;
+export default ShopBtn;

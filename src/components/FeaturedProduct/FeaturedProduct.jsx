@@ -1,22 +1,21 @@
-import React from "react";
-import Container from "../utils/Container";
 import Image from "next/image";
-import img01 from "../../assets/images/productImg/image01.png";
-import img02 from "../../assets/images/productImg/image02.png";
-import img03 from "../../assets/images/productImg/image03.png";
-import img04 from "../../assets/images/productImg/image04.png";
+import img01 from "../../assets/images/newArrival/newArrival01.png";
+import img02 from "../../assets/images/newArrival/newArrival02.png";
+import img03 from "../../assets/images/newArrival/newArrival03.png";
+import img04 from "../../assets/images/newArrival/newArrival04.png";
 import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
-import AddToCartBtn from "../utils/CommonBtn/AddToCartBtn";
+import Container from "../utils/Container";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
+import AddToCartBtn from "../utils/CommonBtn/AddToCartBtn";
 
-const BigDeal = () => {
+const FeaturedProduct = () => {
   return (
     <Container>
-      <div className="mt-20">
-        <p className="uppercase text-purple-600">Summer</p>
+      <div className="mt-7">
+        <p className="uppercase text-purple-600">FEATURED PRODUCT</p>
         <div className="flex justify-between">
-          <p className="font-semibold text-2xl">Big Deal</p>
+          <p className="font-semibold text-2xl">New Arrivals</p>
           <div className="flex gap-2">
             <Image src={leftArrow} alt="leftArrow"></Image>
             <Image src={rightArrow} alt="rightArrow"></Image>
@@ -32,18 +31,9 @@ const BigDeal = () => {
                 src={img01}
                 alt="img01"
               ></Image>
-              <div className="absolute top-0 right-4 bg-purple-600 text-white font-semibold text-center px-3 pt-1 pb-1 rounded-b-full">
-                <p>Up</p>
-                <p>to</p>
-                <p>40%</p>
-              </div>
             </div>
           </div>
-          <p className="mt-3">
-            <span className="text-[#FFC700] text-xl">★★★★★</span>
-            <span className="text-xl">(50)</span>
-          </p>
-          <div className="flex justify-between mt-1">
+          <div className="flex justify-between mt-3">
             <p>Indian Sharee</p>
             <p className="text-lg font-semibold uppercase">Bdt 2,300</p>
           </div>
@@ -58,18 +48,9 @@ const BigDeal = () => {
                 src={img02}
                 alt="img02"
               ></Image>
-              <div className="absolute top-0 right-4 bg-purple-600 text-white font-semibold text-center px-3 pt-1 pb-1 rounded-b-full">
-                <p>Up</p>
-                <p>to</p>
-                <p>40%</p>
-              </div>
             </div>
           </div>
-          <p className="mt-3">
-            <span className="text-[#FFC700] text-xl">★★★★★</span>
-            <span className="text-xl">(50)</span>
-          </p>
-          <div className="flex justify-between mt-1">
+          <div className="flex justify-between mt-3">
             <p>Indian Sharee</p>
             <p className="text-lg font-semibold uppercase">Bdt 2,300</p>
           </div>
@@ -84,18 +65,9 @@ const BigDeal = () => {
                 src={img03}
                 alt="img03"
               ></Image>
-              <div className="absolute top-0 right-4 bg-purple-600 text-white font-semibold text-center px-3 pt-1 pb-1 rounded-b-full">
-                <p>Up</p>
-                <p>to</p>
-                <p>40%</p>
-              </div>
             </div>
           </div>
-          <p className="mt-3">
-            <span className="text-[#FFC700] text-xl">★★★★★</span>
-            <span className="text-xl">(50)</span>
-          </p>
-          <div className="flex justify-between mt-1">
+          <div className="flex justify-between mt-3">
             <p>Indian Sharee</p>
             <p className="text-lg font-semibold uppercase">Bdt 2,300</p>
           </div>
@@ -110,18 +82,9 @@ const BigDeal = () => {
                 src={img04}
                 alt="img04"
               ></Image>
-              <div className="absolute top-0 right-4 bg-purple-600 text-white font-semibold text-center px-3 pt-1 pb-1 rounded-b-full">
-                <p>Up</p>
-                <p>to</p>
-                <p>40%</p>
-              </div>
             </div>
           </div>
-          <p className="mt-3">
-            <span className="text-[#FFC700] text-xl">★★★★★</span>
-            <span className="text-xl">(50)</span>
-          </p>
-          <div className="flex justify-between mt-1">
+          <div className="flex justify-between mt-3">
             <p>Indian Sharee</p>
             <p className="text-lg font-semibold uppercase">Bdt 2,300</p>
           </div>
@@ -133,4 +96,4 @@ const BigDeal = () => {
   );
 };
 
-export default BigDeal;
+export default FeaturedProduct;

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Banner.css";
-import CommonBtn from "../utils/CommonBtn";
+import CommonBtn from "../utils/CommonBtn/ShopBtn";
 
 const Banner = () => {
   return (

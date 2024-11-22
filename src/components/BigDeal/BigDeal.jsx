@@ -90,7 +90,7 @@ const BigDeal = () => {
           productPrice="2,300"
         ></ProductCard>
       </div>
-      <SeeMoreBtn>See more</SeeMoreBtn>
+      <SeeMoreBtn></SeeMoreBtn>
     </Container>
   );
 };

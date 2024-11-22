@@ -44,7 +44,7 @@ const RelatedProduct = () => {
           price="Bdt 2,300"
         ></NewArrivalCard>
       </div>
-      <SeeMoreBtn>See more</SeeMoreBtn>
+      <SeeMoreBtn></SeeMoreBtn>
     </div>
   );
 };

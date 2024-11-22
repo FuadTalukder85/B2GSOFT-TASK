@@ -48,7 +48,7 @@ const FeaturedProduct = () => {
           price="Bdt 2,300"
         ></NewArrivalCard>
       </div>
-      <SeeMoreBtn>See more</SeeMoreBtn>
+      <SeeMoreBtn></SeeMoreBtn>
     </Container>
   );
 };

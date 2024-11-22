@@ -90,7 +90,7 @@ const ProductDetails = () => {
           </div>
           {/* button */}
           <div className="flex gap-3 mt-7">
-            <button className="mt-3 py-2 w-full bg-purple-600 rounded-lg font-semibold text-white">
+            <button className="mt-3 py-2 w-full bg-purple-600 rounded-lg font-semibold text-white hover:bg-purple-700 transition-all duration-700">
               Buy Now
             </button>
             <AddToCartBtn></AddToCartBtn>

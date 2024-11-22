@@ -1,5 +1,4 @@
 import React from "react";
-import { GoArrowUpRight } from "react-icons/go";
 import "./Banner.css";
 import CommonBtn from "../utils/CommonBtn";
 

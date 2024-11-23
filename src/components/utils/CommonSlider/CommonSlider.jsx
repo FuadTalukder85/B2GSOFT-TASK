@@ -9,21 +9,9 @@ import NewArrivalCard from "../ReusableCard/NewArrivalCard";
 import Slider from "react-slick";
 const NextArrow = ({ onClick }) => {
   return (
-    <div className="flex justify-end absolute top-0 right-10">
+    <div className="flex justify-end absolute top-0 right-0">
       <div
         className="custom-arrow prev-arrow flex items-center justify-center w-8 h-8 border border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer"
-        onClick={onClick}
-      >
-        <GoArrowLeft />
-      </div>
-    </div>
-  );
-};
-const PrevArrow = ({ onClick }) => {
-  return (
-    <div className="flex justify-end -mt-10">
-      <div
-        className="custom-arrow next-arrow flex items-center justify-center w-8 h-8 border border-purple-900 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer"
         onClick={onClick}
       >
         <GoArrowRight />
@@ -31,6 +19,19 @@ const PrevArrow = ({ onClick }) => {
     </div>
   );
 };
+const PrevArrow = ({ onClick }) => {
+  return (
+    <div className="flex justify-end -mt-10 mr-10">
+      <div
+        className="custom-arrow next-arrow flex items-center justify-center w-8 h-8 border border-purple-900 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer"
+        onClick={onClick}
+      >
+        <GoArrowLeft />
+      </div>
+    </div>
+  );
+};
+
 const CommonSlider = () => {
   const settings = {
     dots: false,

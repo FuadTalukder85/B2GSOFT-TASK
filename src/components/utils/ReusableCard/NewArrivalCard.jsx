@@ -3,11 +3,11 @@ import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 const NewArrivalCard = ({ cardImg, title, price }) => {
   return (
     <div>
-      <div className="bg-white rounded-2xl p-3 mt-10 mx-3">
-        <div className="bg-[#F6F5FD] overflow-hidden">
+      <div className="bg-white rounded-2xl p-2 mt-10 mx-3">
+        <div className="bg-[#F6F5FD] overflow-hidden rounded-xl">
           <div className="relative flex items-center justify-center h-[260px]">
             <Image
-              className="absolute px-3 bottom-0"
+              className="absolute px-3 bottom-0 rounded-xl"
               src={cardImg}
               alt="cardImg"
               width={400}

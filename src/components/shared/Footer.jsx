@@ -8,21 +8,30 @@ import linkeIcon from "../../assets/icons/linkedin_icon.png";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#1D1D1D] text-white py-14 mt-24">
+      <div className="bg-[#1D1D1D] text-white py-7 md:py-14 pb-10 md:pb-10 mt-24 px-5 md:px-0">
         <Container>
-          <div className="grid grid-cols-2">
-            <div className="pr-60">
+          <div className="md:grid grid-cols-2">
+            <div className="md:pr-60">
               {/* logo */}
-              <Image src={logo} alt="logo"></Image>
-              <p className="mt-7">
+              <Image className="hidden md:block" src={logo} alt="logo"></Image>
+              <Image
+                className="md:hidden"
+                src={logo}
+                alt="logo"
+                width={100}
+                height={100}
+              ></Image>
+              <p className="mt-3 md:mt-7 text-xs md:text-base">
                 Saepe quo suscipit vitae quia. Repudiandae nobis quis.
                 Laboriosam unde quae qui quasi mollitia tenetur. Dicta explicabo
                 est consectetur maxime quos fugit velit assumenda est.
               </p>
             </div>
             <div>
-              <h3 className="text-2xl">Sign Up For Our Newsletter!</h3>
-              <p className="pr-6 mt-2">
+              <h3 className="text-xl md:text-2xl mt-5 md:mt-0">
+                Sign Up For Our Newsletter!
+              </h3>
+              <p className="pr-6 mt-2 text-xs md:text-base">
                 Get notified about updates and be the first to get early access
                 to new Podcast episodes.
               </p>
@@ -31,9 +40,9 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="Youe email address"
-                    className="p-4 w-48 md:w-[435px] rounded-s-lg"
+                    className="p-2 md:p-4 w-56 md:w-[435px] rounded-s-lg"
                   />
-                  <button className="p-4 bg-purple-600 w-48 rounded-e-lg">
+                  <button className="p-2 md:p-4 bg-purple-600 w-24 rounded-e-lg">
                     Subscribe
                   </button>
                 </div>
@@ -41,25 +50,43 @@ const Footer = () => {
             </div>
           </div>
           {/* middle footer */}
-          <div className="flex justify-between mt-16">
+          <div className="md:flex justify-between mt-16">
             <ul>
-              <li className="font-bold pb-1">Contact Us</li>
-              <li>Support@we5ive.com</li>
+              <li className="font-bold pb-1 text-sm md:text-base">
+                Contact Us
+              </li>
+              <li className="text-xs md:text-base">Support@we5ive.com</li>
             </ul>
             <ul>
-              <li className="font-bold pb-1">About Us</li>
-              <li>Contact Us</li>
+              <li className="font-bold pb-1 text-sm md:text-base mt-4 md:mt-0">
+                About Us
+              </li>
+              <li className="text-xs md:text-base">Contact Us</li>
             </ul>
             <ul>
-              <li className="font-bold pb-1">Privacy policy</li>
-              <li>Terms & condition</li>
+              <li className="font-bold pb-1 text-sm md:text-base mt-4 md:mt-0">
+                Privacy policy
+              </li>
+              <li className="text-xs md:text-base">Terms & condition</li>
             </ul>
             <ul>
-              <li className="font-bold pb-1">Social Link</li>
-              <li className="flex gap-5 mt-3">
+              <li className="font-bold pb-1 text-sm md:text-base mt-4 md:mt-0">
+                Social Link
+              </li>
+              <li className="hidden md:flex gap-5 mt-3">
                 <Image src={fbIcon} alt="fbIcon"></Image>
                 <Image src={xIcon} alt="fbIcon"></Image>
                 <Image src={linkeIcon} alt="fbIcon"></Image>
+              </li>
+              <li className="md:hidden flex gap-5">
+                <Image src={fbIcon} alt="fbIcon" width={20} height={20}></Image>
+                <Image src={xIcon} alt="fbIcon" width={20} height={20}></Image>
+                <Image
+                  src={linkeIcon}
+                  alt="fbIcon"
+                  width={20}
+                  height={20}
+                ></Image>
               </li>
             </ul>
           </div>

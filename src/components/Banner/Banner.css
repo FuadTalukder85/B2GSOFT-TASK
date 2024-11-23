@@ -3,3 +3,8 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.responsive-banner {
+  background-image: url("../../assets/images/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

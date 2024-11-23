@@ -52,21 +52,25 @@ const CategorySlider = () => {
   return (
     <Container>
       <Slider {...settings}>
-        <div className="relative cursor-pointer">
-          <div className="flex items-center gap-10 mt-10">
+        <div className="px-5 md:px-0 relative cursor-pointer">
+          <div className="md:flex items-center gap-10 mt-10">
             <Image src={man} alt="man"></Image>
             <div>
-              <p className="text-5xl uppercase">MEN COLLECTION</p>
+              <p className="text-2xl md:text-5xl mt-3 md:mt-0 uppercase font-semibold">
+                MEN COLLECTION
+              </p>
               <div className="mt-5 flex justify-start">
                 <ShopBtn></ShopBtn>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative cursor-pointer">
-          <div className="flex items-center gap-10 mt-10">
+        <div className="px-5 md:px-0 relative cursor-pointer">
+          <div className="md:flex items-center gap-10 mt-10">
             <div>
-              <p className="text-5xl uppercase">women COLLECTION</p>
+              <p className="text-2xl md:text-5xl mt-3 md:mt-0 uppercase font-semibold">
+                women COLLECTION
+              </p>
               <div className="mt-5 flex justify-start">
                 <ShopBtn></ShopBtn>
               </div>
@@ -74,11 +78,13 @@ const CategorySlider = () => {
             <Image src={women} alt="women"></Image>
           </div>
         </div>
-        <div className="relative cursor-pointer">
-          <div className="flex items-center gap-10 mt-10">
+        <div className="px-5 md:px-0 relative cursor-pointer">
+          <div className="md:flex items-center gap-10 mt-10">
             <Image src={kids} alt="kids"></Image>
             <div>
-              <p className="text-5xl uppercase">kid COLLECTION</p>
+              <p className="text-2xl md:text-5xl mt-3 md:mt-0 uppercase font-semibold">
+                kid COLLECTION
+              </p>
               <div className="mt-5 flex justify-start">
                 <ShopBtn></ShopBtn>
               </div>

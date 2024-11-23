@@ -22,7 +22,9 @@ const FeaturedProduct = () => {
         <CommonSlider></CommonSlider>
       </div>
       {/* </div> */}
-      <SeeMoreBtn></SeeMoreBtn>
+      <div>
+        <SeeMoreBtn></SeeMoreBtn>
+      </div>
     </Container>
   );
 };

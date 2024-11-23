@@ -9,7 +9,7 @@ import NewArrivalCard from "../ReusableCard/NewArrivalCard";
 import Slider from "react-slick";
 const NextArrow = ({ onClick }) => {
   return (
-    <div className="flex justify-end absolute top-0 right-0 px-12 md:px-0">
+    <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
       <div
         className="custom-arrow prev-arrow flex items-center justify-center w-8 h-8 border border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer"
         onClick={onClick}
@@ -21,9 +21,9 @@ const NextArrow = ({ onClick }) => {
 };
 const PrevArrow = ({ onClick }) => {
   return (
-    <div className="flex justify-end -mt-10 mr-16 md:mr-10 px-5 md:px-0">
+    <div className="flex justify-end -mt-10 mr-10 md:mr-10 px-5 md:px-0 z-10">
       <div
-        className="custom-arrow next-arrow flex items-center justify-center w-8 h-8 border border-purple-900 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer"
+        className="custom-arrow next-arrow flex items-center justify-center w-8 h-8 border border-purple-900 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700 cursor-pointer z-10"
         onClick={onClick}
       >
         <GoArrowLeft />
@@ -56,7 +56,7 @@ const CommonSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.1,
+          slidesToShow: 1.05,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
@@ -68,25 +68,25 @@ const CommonSlider = () => {
   };
 
   return (
-    <div className="w-[360px] md:w-full ms-5">
+    <div className="ml-5 md:ml-0">
       <Slider {...settings}>
-        <div className="relative ps-5">
+        <div className="relative">
           <NewArrivalCard
             cardImg={img01}
             title="Indian Sharee"
             price="Bdt 2,300"
           />
         </div>
-        <div className="relative ps-5">
+        <div className="relative">
           <NewArrivalCard cardImg={img02} title="Hoodie" price="Bdt 2,300" />
         </div>
-        <div className="relative ps-5">
+        <div className="relative">
           <NewArrivalCard cardImg={img03} title="Plazu" price="Bdt 2,300" />
         </div>
-        <div className="relative ps-5">
+        <div className="relative">
           <NewArrivalCard cardImg={img04} title="Jacket" price="Bdt 2,300" />
         </div>
-        <div className="relative ps-5">
+        <div className="relative">
           <NewArrivalCard cardImg={img02} title="Hoodie" price="Bdt 2,300" />
         </div>
       </Slider>

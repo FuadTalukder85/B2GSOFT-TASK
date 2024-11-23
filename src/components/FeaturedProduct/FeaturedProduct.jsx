@@ -10,7 +10,7 @@ import CommonSlider from "../utils/CommonSlider/CommonSlider";
 const FeaturedProduct = () => {
   return (
     <Container>
-      <div className="mt-7">
+      <div className="mt-16 px-5 md:px-0">
         <p className="uppercase text-purple-600">FEATURED PRODUCT</p>
         <div className="flex justify-between">
           <p className="font-semibold text-2xl">New Arrivals</p>
@@ -18,7 +18,9 @@ const FeaturedProduct = () => {
       </div>
       {/* <div className="grid grid-cols-4 gap-7 mt-5"> */}
       {/* Slider */}
-      <CommonSlider></CommonSlider>
+      <div className="">
+        <CommonSlider></CommonSlider>
+      </div>
       {/* </div> */}
       <SeeMoreBtn></SeeMoreBtn>
     </Container>

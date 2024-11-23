@@ -16,7 +16,9 @@ const ProductCard = ({
             <Image
               className="absolute px-3 bottom-0 rounded-lg"
               src={productImg}
-              alt="img01"
+              alt="productImg"
+              width={400}
+              height={400}
             ></Image>
             <div className="absolute top-0 right-4 bg-purple-600 text-white font-semibold text-center px-3 pt-1 pb-1 rounded-b-full">
               <p>Up</p>

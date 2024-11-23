@@ -2,7 +2,6 @@
 import React from "react";
 import Container from "../utils/Container";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CommonSlider from "../utils/CommonSlider/CommonSlider";

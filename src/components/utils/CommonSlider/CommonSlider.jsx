@@ -1,12 +1,8 @@
 "use client";
-import React from "react";
-import img01 from "../../../assets/images/newArrival/newArrival01.png";
-import img02 from "../../../assets/images/newArrival/newArrival02.png";
-import img03 from "../../../assets/images/newArrival/newArrival03.png";
-import img04 from "../../../assets/images/newArrival/newArrival04.png";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import NewArrivalCard from "../ReusableCard/NewArrivalCard";
 import Slider from "react-slick";
+import { useProductContext } from "@/Provider/Provider";
 const NextArrow = ({ onClick }) => {
   return (
     <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
@@ -33,6 +29,10 @@ const PrevArrow = ({ onClick }) => {
 };
 
 const CommonSlider = () => {
+  const { filterFeatured } = useProductContext();
+  if (!filterFeatured.length) {
+    return <div className="text-center">Loading...</div>;
+  }
   const settings = {
     dots: false,
     infinite: true,
@@ -70,25 +70,15 @@ const CommonSlider = () => {
   return (
     <div className="ml-5 md:ml-0">
       <Slider {...settings}>
-        <div className="relative">
-          <NewArrivalCard
-            cardImg={img01}
-            title="Indian Sharee"
-            price="Bdt 2,300"
-          />
-        </div>
-        <div className="relative">
-          <NewArrivalCard cardImg={img02} title="Hoodie" price="Bdt 2,300" />
-        </div>
-        <div className="relative">
-          <NewArrivalCard cardImg={img03} title="Plazu" price="Bdt 2,300" />
-        </div>
-        <div className="relative">
-          <NewArrivalCard cardImg={img04} title="Jacket" price="Bdt 2,300" />
-        </div>
-        <div className="relative">
-          <NewArrivalCard cardImg={img02} title="Hoodie" price="Bdt 2,300" />
-        </div>
+        {filterFeatured.map((product) => (
+          <div key={product._id} className="relative">
+            <NewArrivalCard
+              cardImg={product.firstImg}
+              title={product.title}
+              price={`Bdt ${product.price}`}
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

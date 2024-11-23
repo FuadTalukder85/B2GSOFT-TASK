@@ -1,0 +1,200 @@
+[
+  {
+    "_id": "6697659a4509d6fee5209e01a",
+    "title": "Indian Sharee",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "secondImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "thirdImg": "https://i.postimg.cc/XYHNcL7p/image01.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e02a",
+    "title": "Woman wearing sari",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "secondImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "thirdImg": "https://i.postimg.cc/jqHsktSV/image02.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e03a",
+    "title": "Half Sleeve Shirt",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/C1WzCN7j/image03.png",
+    "secondImg": "https://i.postimg.cc/C1WzCN7j/image03.png",
+    "thirdImg": "https://i.postimg.cc/C1WzCN7j/image03.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e04a",
+    "title": "Checkered shirt",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "secondImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "thirdImg": "https://i.postimg.cc/9FHDrLr2/image04.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e05a",
+    "title": "Indian Sharee",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp",
+    "secondImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp",
+    "thirdImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e06a",
+    "title": "Hoodie",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "secondImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "thirdImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e07a",
+    "title": "Plazu",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "secondImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "thirdImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e08a",
+    "title": "Jacket",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "secondImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "thirdImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e09a",
+    "title": "Indian Sharee",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "secondImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "thirdImg": "https://i.postimg.cc/XYHNcL7p/image01.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e10a",
+    "title": "Woman wearing sari",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "secondImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "thirdImg": "https://i.postimg.cc/jqHsktSV/image02.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e11a",
+    "title": "Checkered shirt",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "secondImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "thirdImg": "https://i.postimg.cc/9FHDrLr2/image04.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e12a",
+    "title": "Hoodie",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "secondImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "thirdImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e13a",
+    "title": "Plazu",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "secondImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "thirdImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e14a",
+    "title": "Indian Sharee",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp",
+    "secondImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp",
+    "thirdImg": "https://i.postimg.cc/5yBgjB1v/new-Arrival01.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e15a",
+    "title": "Hoodie",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "secondImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp",
+    "thirdImg": "https://i.postimg.cc/VLF48WKP/new-Arrival02.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e16a",
+    "title": "Plazu",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "secondImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp",
+    "thirdImg": "https://i.postimg.cc/2jQ7QxRL/new-Arrival03.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e17a",
+    "title": "Jacket",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "secondImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "thirdImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e18a",
+    "title": "Indian Sharee",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "secondImg": "https://i.postimg.cc/XYHNcL7p/image01.png",
+    "thirdImg": "https://i.postimg.cc/XYHNcL7p/image01.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e19a",
+    "title": "Woman wearing sari",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "secondImg": "https://i.postimg.cc/jqHsktSV/image02.png",
+    "thirdImg": "https://i.postimg.cc/jqHsktSV/image02.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e20a",
+    "title": "Half Sleeve Shirt",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/C1WzCN7j/image03.png",
+    "secondImg": "https://i.postimg.cc/C1WzCN7j/image03.png",
+    "thirdImg": "https://i.postimg.cc/C1WzCN7j/image03.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e21a",
+    "title": "Checkered shirt",
+    "tag": "",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "secondImg": "https://i.postimg.cc/9FHDrLr2/image04.png",
+    "thirdImg": "https://i.postimg.cc/9FHDrLr2/image04.png"
+  },
+  {
+    "_id": "6697659a4509d6fee5209e22a",
+    "title": "Jacket",
+    "tag": "featured",
+    "price": "2,300",
+    "firstImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "secondImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp",
+    "thirdImg": "https://i.postimg.cc/pXPYqnRG/new-Arrival04.webp"
+  }
+]

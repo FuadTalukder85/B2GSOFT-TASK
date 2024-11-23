@@ -1,3 +1,4 @@
+"use client";
 import Container from "@/components/utils/Container";
 import Image from "next/image";
 import React from "react";
@@ -8,7 +9,6 @@ import hoodie04 from "../../../../assets/images/productImg/hoodie04.png";
 import hoodie05 from "../../../../assets/images/productImg/hoodie05.png";
 import AddToCartBtn from "@/components/utils/CommonBtn/AddToCartBtn";
 import Review from "@/components/Review/Review";
-import FeaturedProduct from "@/components/FeaturedProduct/FeaturedProduct";
 import RelatedProduct from "@/components/RelatedProduct/RelatedProduct";
 
 const ProductDetails = () => {

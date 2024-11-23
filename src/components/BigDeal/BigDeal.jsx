@@ -8,6 +8,7 @@ import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
 import ProductCard from "../utils/ReusableCard/ProductCard";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
+import { useProductContext } from "@/Provider/Provider";
 const NextArrow = ({ onClick }) => {
   return (
     <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
@@ -33,6 +34,10 @@ const PrevArrow = ({ onClick }) => {
   );
 };
 const BigDeal = () => {
+  const { products } = useProductContext();
+  const filterproduct = products.filter(
+    (product) => product.tag !== "featured"
+  );
   const settings = {
     dots: false,
     infinite: true,
@@ -79,131 +84,17 @@ const BigDeal = () => {
       <div className="ml-5 md:ml-0">
         <Slider {...settings}>
           {/* <div className="grid grid-cols-4 gap-7 mt-5"> */}
-          {/* card 01 */}
-          <div className="relative">
-            <ProductCard
-              productImg={img01}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Indian Sharee"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 2 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img02}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Half Sleeve Shirt"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 03 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img03}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Woman wearing sari"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 04 */}
-          <div className="relative">
-            <ProductCard
-              productImg={img04}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Checkered shirt"
-              productPrice="2,300"
-            />
-          </div>
-          {/* more card for slider */}
-          <div className="relative">
-            <ProductCard
-              productImg={img01}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Indian Sharee"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 2 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img02}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Half Sleeve Shirt"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 03 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img03}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Woman wearing sari"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 04 */}
-          <div className="relative">
-            <ProductCard
-              productImg={img04}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Checkered shirt"
-              productPrice="2,300"
-            />
-          </div>
-          <div className="relative">
-            <ProductCard
-              productImg={img01}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Indian Sharee"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 2 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img02}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Half Sleeve Shirt"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 03 */}
-          <div className="relative">
-            {" "}
-            <ProductCard
-              productImg={img03}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Woman wearing sari"
-              productPrice="2,300"
-            />
-          </div>
-          {/* card 04 */}
-          <div className="relative">
-            <ProductCard
-              productImg={img04}
-              review="★★★★★"
-              totalReview="50"
-              productTitle="Checkered shirt"
-              productPrice="2,300"
-            />
-          </div>
+          {filterproduct.map((product) => (
+            <div key={product._id} className="relative">
+              <ProductCard
+                productImg={product.firstImg}
+                review="★★★★★"
+                totalReview="50"
+                productTitle={product.title}
+                productPrice={`Bdt ${product.price}`}
+              />
+            </div>
+          ))}
           {/* </div> */}
         </Slider>
       </div>

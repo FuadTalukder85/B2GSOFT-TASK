@@ -3,8 +3,8 @@ import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 const NewArrivalCard = ({ cardImg, title, price }) => {
   return (
     <div>
-      <div className="bg-white p-3">
-        <div className="bg-[#F6F5FD]">
+      <div className="bg-white rounded-2xl p-3 mt-10 mx-3">
+        <div className="bg-[#F6F5FD] overflow-hidden">
           <div className="relative flex items-center justify-center h-[260px]">
             <Image
               className="absolute px-3 bottom-0"

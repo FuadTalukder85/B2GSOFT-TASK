@@ -1,14 +1,12 @@
 import React from "react";
 import Container from "../utils/Container";
-import Image from "next/image";
 import img01 from "../../assets/images/productImg/image01.png";
 import img02 from "../../assets/images/productImg/image02.png";
 import img03 from "../../assets/images/productImg/image03.png";
 import img04 from "../../assets/images/productImg/image04.png";
-import leftArrow from "../../assets/icons/leftArrow.png";
-import rightArrow from "../../assets/icons/rightArrow.png";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
 import ProductCard from "../utils/ReusableCard/ProductCard";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const BigDeal = () => {
   return (
@@ -17,9 +15,13 @@ const BigDeal = () => {
         <p className="uppercase text-purple-600">Summer</p>
         <div className="flex justify-between">
           <p className="font-semibold text-2xl">Big Deal</p>
-          <div className="flex gap-2">
-            <Image src={leftArrow} alt="leftArrow"></Image>
-            <Image src={rightArrow} alt="rightArrow"></Image>
+          <div className="flex gap-2 text-purple-600">
+            <button className="flex items-center justify-center w-8 h-8 border border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700">
+              <GoArrowLeft />
+            </button>
+            <button className="flex items-center justify-center w-8 h-8 border border-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition-all duration-700">
+              <GoArrowRight />
+            </button>
           </div>
         </div>
       </div>

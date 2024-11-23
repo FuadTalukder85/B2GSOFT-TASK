@@ -7,7 +7,6 @@ import img03 from "../../assets/images/productImg/image03.png";
 import img04 from "../../assets/images/productImg/image04.png";
 import leftArrow from "../../assets/icons/leftArrow.png";
 import rightArrow from "../../assets/icons/rightArrow.png";
-import AddToCartBtn from "../utils/CommonBtn/AddToCartBtn";
 import SeeMoreBtn from "../utils/CommonBtn/SeeMoreBtn";
 import ProductCard from "../utils/ReusableCard/ProductCard";
 
@@ -43,7 +42,7 @@ const BigDeal = () => {
         ></ProductCard>
         {/* card 03 */}
         <ProductCard
-          productImg={img01}
+          productImg={img03}
           review="★★★★★"
           totalReview="50"
           productTitle="Woman wearing sari"
@@ -51,7 +50,7 @@ const BigDeal = () => {
         ></ProductCard>
         {/* card 04 */}
         <ProductCard
-          productImg={img01}
+          productImg={img04}
           review="★★★★★"
           totalReview="50"
           productTitle="Checkered shirt"
@@ -75,7 +74,7 @@ const BigDeal = () => {
         ></ProductCard>
         {/* card 03 */}
         <ProductCard
-          productImg={img01}
+          productImg={img03}
           review="★★★★★"
           totalReview="50"
           productTitle="Woman wearing sari"
@@ -83,7 +82,7 @@ const BigDeal = () => {
         ></ProductCard>
         {/* card 04 */}
         <ProductCard
-          productImg={img01}
+          productImg={img04}
           review="★★★★★"
           totalReview="50"
           productTitle="Checkered shirt"

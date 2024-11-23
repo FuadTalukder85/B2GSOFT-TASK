@@ -66,7 +66,7 @@ const Footer = () => {
         </Container>
       </div>
       {/* copy right */}
-      <div className="bg-[#7E53D4] text-white text-center py-4">
+      <div className="bg-purple-600 text-white text-center py-4">
         <span>© 2024 | We5ive</span>
       </div>
     </>

@@ -16,7 +16,7 @@ const Review = () => {
         {/* Reviews Section */}
         <div className="">
           <div className="mb-4">
-            <select className="bg-transparent border border-purple-600 rounded px-3 py-2 text-sm focus:outline-none">
+            <select className="bg-transparent border border-purple-600 rounded-lg px-3 py-2 text-sm focus:outline-none">
               <option value="newest">Newest</option>
               <option value="old">Old</option>
             </select>

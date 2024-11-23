@@ -11,7 +11,7 @@ const CategorySlider = () => {
         <Image src={man} alt="man"></Image>
         <div>
           <p className="text-5xl uppercase">MEN COLLECTION</p>
-          <div className="mt-3">
+          <div className="mt-3 flex justify-start">
             <ShopBtn></ShopBtn>
           </div>
         </div>

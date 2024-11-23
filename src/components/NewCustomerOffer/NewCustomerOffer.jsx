@@ -8,15 +8,15 @@ import { pacifico } from "../../app/fonts/fonts.jsx";
 const NewCustomerOffer = () => {
   return (
     <Container>
-      <div className="flex items-center justify-between bg-[#F4F8FF] px-10 mt-5">
+      <div className="flex items-center justify-between bg-[#F4F8FF] px-10 mt-16">
         <div>
           <p className={`text-purple-600 text-2xl ${pacifico.className}`}>
             Big Deal
           </p>
-          <p className="text-purple-600 text-5xl font-semibold mt-2">
+          <p className="text-purple-600 text-5xl font-semibold mt-4">
             30% <span className="text-black">Off for New Customers</span>
           </p>
-          <div className="mt-4">
+          <div className="mt-6 flex justify-start">
             <ShopBtn></ShopBtn>
           </div>
         </div>

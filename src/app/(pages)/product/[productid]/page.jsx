@@ -98,7 +98,9 @@ const ProductDetails = () => {
         </div>
       </div>
       {/*  */}
-      <Review></Review>
+      <div className="mt-16">
+        <Review></Review>
+      </div>
       <RelatedProduct></RelatedProduct>
     </Container>
   );

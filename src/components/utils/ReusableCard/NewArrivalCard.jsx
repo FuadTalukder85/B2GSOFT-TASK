@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 const NewArrivalCard = ({ cardImg, title, price }) => {
   return (
     <div>
@@ -19,7 +18,6 @@ const NewArrivalCard = ({ cardImg, title, price }) => {
           <p>{title}</p>
           <p className="text-lg font-semibold uppercase">bdt {price}</p>
         </div>
-        <AddToCartBtn></AddToCartBtn>
       </div>
     </div>
   );

@@ -9,6 +9,8 @@ import { BiUser } from "react-icons/bi";
 import Link from "next/link";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
+import userIcon from "../../assets/icons/user.png";
+import shoppingIcon from "../../assets/icons/shopping.png";
 import gsap from "gsap";
 const Header = () => {
   // gsap
@@ -58,7 +60,9 @@ const Header = () => {
                 style={{ opacity: 0, visibility: "hidden" }}
               >
                 <div className="flex items-center justify-between">
-                  <Image className="w-28" src={logo} alt="logo"></Image>
+                  <Link href="/">
+                    <Image className="w-28" src={logo} alt="logo"></Image>
+                  </Link>
                   <button
                     id="closeBtn"
                     className="bg-purple-200 p-1 rounded-lg hover:bg-purple-700 transition-all duration-700 hover:text-white"
@@ -78,9 +82,14 @@ const Header = () => {
                 </ul>
               </div>
             </div>
-            <Image className="w-28" src={logo} alt="logo"></Image>
+            <Link href="/">
+              <Image className="w-28" src={logo} alt="logo"></Image>
+            </Link>
           </div>
-          <Image className="hidden md:block" src={logo} alt="logo"></Image>
+          <Link href="/">
+            <Image className="hidden md:block" src={logo} alt="logo"></Image>
+          </Link>
+
           <div className="hidden md:block">
             <ul className="flex gap-5 font-normal text-gray-500">
               <li>
@@ -94,7 +103,6 @@ const Header = () => {
             </ul>
           </div>
           <div className="flex items-center gap-5">
-            {/* Search */}
             {/* responsive search bar */}
             <div className="md:hidden">
               <CiSearch className="text-xl" />
@@ -109,15 +117,15 @@ const Header = () => {
             </div>
 
             <div className="flex gap-3">
-              {/* Cart Icon */}
+              {/* cart icon */}
               <div className="relative">
-                <BsBasket3 className="text-xl" />
+                <Image src={shoppingIcon} alt="shoppingIcon"></Image>
                 <span className="absolute -top-1 -right-1 bg-black text-white text-xs w-4 h-4 flex items-center justify-center rounded-full">
                   0
                 </span>
               </div>
-              {/* User Icon */}
-              <BiUser className="text-xl" />
+              {/* user icon */}
+              <Image src={userIcon} alt="userIcon"></Image>
             </div>
           </div>
         </div>

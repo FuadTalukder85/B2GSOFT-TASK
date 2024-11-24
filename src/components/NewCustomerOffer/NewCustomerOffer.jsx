@@ -8,7 +8,7 @@ import { pacifico } from "../../app/fonts/fonts.jsx";
 const NewCustomerOffer = () => {
   return (
     <Container>
-      <div className="md:flex items-center justify-between text-center md:text-left bg-[#F4F8FF] px-10 mt-16">
+      <div className="md:flex items-center justify-between text-center md:text-left bg-purple-100 pt-4 px-10 mt-16">
         <div>
           <p className={`text-purple-600 text-2xl ${pacifico.className}`}>
             Big Deal

@@ -6,6 +6,7 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
 import { useProductContext } from "@/Provider/Provider";
 import Link from "next/link";
+import AddToCartBtn from "../utils/CommonBtn/AddToCartBtn";
 const NextArrow = ({ onClick }) => {
   return (
     <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
@@ -80,23 +81,24 @@ const BigDeal = () => {
       </div>
       <div className="ml-5 md:ml-0">
         <Slider {...settings}>
-          {/* <div className="grid grid-cols-4 gap-7 mt-5"> */}
           {filterproduct.map((product) => (
             <div key={product._id} className="relative">
-              <ProductCard
-                productImg={product.firstImg}
-                totalReview="50"
-                productTitle={product.title}
-                productPrice={product.price}
-              />
+              <Link href={`/product/${product._id}`}>
+                <ProductCard
+                  productImg={product.firstImg}
+                  totalReview="50"
+                  productTitle={product.title}
+                  productPrice={product.price}
+                />
+              </Link>
+              <div className="px-4">
+                <AddToCartBtn></AddToCartBtn>
+              </div>
             </div>
           ))}
-          {/* </div> */}
         </Slider>
       </div>
-      <Link href="/product">
-        <SeeMoreBtn></SeeMoreBtn>
-      </Link>
+      <SeeMoreBtn></SeeMoreBtn>
     </Container>
   );
 };

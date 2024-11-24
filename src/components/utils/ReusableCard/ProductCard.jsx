@@ -1,5 +1,4 @@
 import Image from "next/image";
-import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 import { Rating, RoundedStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useState } from "react";
@@ -49,7 +48,6 @@ const ProductCard = ({
           <p>{productTitle}</p>
           <p className="text-lg font-semibold uppercase">bdt {productPrice}</p>
         </div>
-        <AddToCartBtn></AddToCartBtn>
       </div>
     </div>
   );

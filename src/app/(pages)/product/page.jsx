@@ -1,4 +1,5 @@
 "use client";
+import AddToCartBtn from "@/components/utils/CommonBtn/AddToCartBtn";
 import Container from "@/components/utils/Container";
 import ProductCard from "@/components/utils/ReusableCard/ProductCard";
 import { useProductContext } from "@/Provider/Provider";
@@ -9,16 +10,21 @@ const ProductPage = () => {
   const { products } = useProductContext();
   return (
     <Container>
-      <div className="grid grid-cols-4">
+      <div className="md:grid grid-cols-4">
         {products.map((product) => (
-          <Link href={`/product/${product._id}`} key={product._id}>
-            <ProductCard
-              productImg={product.firstImg}
-              totalReview="50"
-              productTitle={product.title}
-              productPrice={product.price}
-            />
-          </Link>
+          <div key={product._id}>
+            <Link href={`/product/${product._id}`}>
+              <ProductCard
+                productImg={product.firstImg}
+                totalReview="50"
+                productTitle={product.title}
+                productPrice={product.price}
+              />
+            </Link>
+            <div className="px-4">
+              <AddToCartBtn></AddToCartBtn>
+            </div>
+          </div>
         ))}
       </div>
     </Container>

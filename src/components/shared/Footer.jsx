@@ -42,7 +42,7 @@ const Footer = () => {
                     placeholder="Youe email address"
                     className="p-2 md:p-4 w-56 md:w-[435px] rounded-s-lg"
                   />
-                  <button className="p-2 md:p-4 bg-purple-600 w-24 rounded-e-lg">
+                  <button className="p-2 md:p-4 bg-purple-600 md:w-36 rounded-e-lg">
                     Subscribe
                   </button>
                 </div>

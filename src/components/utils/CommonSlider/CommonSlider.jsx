@@ -3,6 +3,8 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import NewArrivalCard from "../ReusableCard/NewArrivalCard";
 import Slider from "react-slick";
 import { useProductContext } from "@/Provider/Provider";
+import Link from "next/link";
+import AddToCartBtn from "../CommonBtn/AddToCartBtn";
 const NextArrow = ({ onClick }) => {
   return (
     <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
@@ -71,12 +73,19 @@ const CommonSlider = () => {
     <div className="ml-5 md:ml-0">
       <Slider {...settings}>
         {filterFeatured.map((product) => (
-          <div key={product._id} className="relative">
-            <NewArrivalCard
-              cardImg={product.firstImg}
-              title={product.title}
-              price={product.price}
-            />
+          <div key={product._id}>
+            <Link href={`/product/${product._id}`}>
+              <div className="relative">
+                <NewArrivalCard
+                  cardImg={product.firstImg}
+                  title={product.title}
+                  price={product.price}
+                />
+              </div>
+            </Link>
+            <div className="px-4">
+              <AddToCartBtn></AddToCartBtn>
+            </div>
           </div>
         ))}
       </Slider>

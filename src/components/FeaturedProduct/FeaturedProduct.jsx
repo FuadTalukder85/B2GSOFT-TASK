@@ -15,7 +15,6 @@ const FeaturedProduct = () => {
           <p className="font-semibold text-2xl">New Arrivals</p>
         </div>
       </div>
-      {/* <div className="grid grid-cols-4 gap-7 mt-5"> */}
       {/* Slider */}
       <div className="">
         <CommonSlider></CommonSlider>

@@ -12,35 +12,43 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "./productid.css";
+import { useProductContext } from "@/Provider/Provider";
 
-const ProductDetails = () => {
+const ProductDetails = ({ params }) => {
+  const { productid } = React.use(params);
   const [quantity, setQuantity] = useState(1);
+  const { products } = useProductContext();
+  const product = products.find((item) => item._id === productid);
+
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
+
   const handleIncrement = () => {
     setQuantity(quantity + 1);
   };
+
   const images = [
     {
-      original: hoodie01.src,
-      thumbnail: hoodie01.src,
+      original: product?.firstImg,
+      thumbnail: product?.firstImg,
     },
     {
-      original: hoodie02.src,
-      thumbnail: hoodie02.src,
+      original: product?.firstImg,
+      thumbnail: product?.firstImg,
     },
     {
-      original: hoodie03.src,
-      thumbnail: hoodie03.src,
+      original: product?.firstImg,
+      thumbnail: product?.firstImg,
     },
     {
-      original: hoodie05.src,
-      thumbnail: hoodie05.src,
+      original: product?.firstImg,
+      thumbnail: product?.firstImg,
     },
   ];
+
   const customLeftNav = (onClick, disabled) => (
     <button
       className={`custom-slider-nav left-nav ${disabled ? "disabled" : ""}`}
@@ -58,13 +66,13 @@ const ProductDetails = () => {
       <GoArrowRight />
     </button>
   );
+
   return (
     <Container>
       <p className="font-medium mt-10">
         Feature Product / <span className="text-purple-600">New Arrival</span>
       </p>
       <div className="grid grid-cols-2 gap-10 mt-10">
-        {/* Image Slider Section */}
         <div>
           <ImageGallery
             items={images}
@@ -76,12 +84,11 @@ const ProductDetails = () => {
           />
         </div>
 
-        {/* Product Details Section */}
         <div>
           <button className="py-2 px-12 rounded-lg bg-purple-950 text-white">
             New Arrival
           </button>
-          <h3 className="text-3xl font-semibold mt-5">White Hoodie</h3>
+          <h3 className="text-3xl font-semibold mt-5">{product?.title}</h3>
           <p className="text-[#FFC700] text-xl mt-5">
             ★★★★★ <span className="text-black">(4.0)</span>
             <span className="text-purple-600 ps-3">121 reviews</span>
@@ -141,11 +148,10 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      {/*  */}
       <div className="mt-16">
-        <Review></Review>
+        <Review />
       </div>
-      <RelatedProduct></RelatedProduct>
+      <RelatedProduct />
     </Container>
   );
 };

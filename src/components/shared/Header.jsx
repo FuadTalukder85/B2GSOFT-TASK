@@ -5,6 +5,7 @@ import logo from "../../assets/images/we5ive_logo.png";
 import { CiSearch } from "react-icons/ci";
 import { BsBasket3 } from "react-icons/bs";
 import { BiUser } from "react-icons/bi";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -14,8 +15,12 @@ const Header = () => {
           <Image src={logo} alt="logo"></Image>
           <div>
             <ul className="flex gap-5 font-normal text-gray-500">
-              <li>Home</li>
-              <li>Shop</li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/product">Shop</Link>
+              </li>
               <li>Deals</li>
               <li>What's New</li>
             </ul>

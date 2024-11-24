@@ -12,7 +12,7 @@ const ProductCard = ({
     <div>
       <div className="bg-white p-2 rounded-2xl m-3 mt-10">
         <div className="bg-[#F6F5FD] rounded-lg">
-          <div className="relative flex items-center justify-center h-[260px]">
+          <div className="relative flex items-center justify-center h-[260px] overflow-hidden">
             <Image
               className="absolute px-3 bottom-0 rounded-lg"
               src={productImg}

@@ -5,7 +5,7 @@ const NewArrivalCard = ({ cardImg, title, price }) => {
     <div>
       <div className="bg-white rounded-2xl p-2 mt-10 mx-3">
         <div className="bg-[#F6F5FD] overflow-hidden rounded-xl">
-          <div className="relative flex items-center justify-center h-[260px]">
+          <div className="relative flex items-center justify-center h-[260px] overflow-hidden">
             <Image
               className="absolute px-3 bottom-0 rounded-xl"
               src={cardImg}

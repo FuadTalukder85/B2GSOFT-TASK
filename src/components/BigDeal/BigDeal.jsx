@@ -5,6 +5,7 @@ import ProductCard from "../utils/ReusableCard/ProductCard";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import Slider from "react-slick";
 import { useProductContext } from "@/Provider/Provider";
+import Link from "next/link";
 const NextArrow = ({ onClick }) => {
   return (
     <div className="flex justify-end absolute top-0 right-0 px-6 md:px-0">
@@ -87,14 +88,16 @@ const BigDeal = () => {
                 review="★★★★★"
                 totalReview="50"
                 productTitle={product.title}
-                productPrice={`Bdt ${product.price}`}
+                productPrice={product.price}
               />
             </div>
           ))}
           {/* </div> */}
         </Slider>
       </div>
-      <SeeMoreBtn></SeeMoreBtn>
+      <Link href="/product">
+        <SeeMoreBtn></SeeMoreBtn>
+      </Link>
     </Container>
   );
 };

@@ -75,7 +75,7 @@ const CommonSlider = () => {
             <NewArrivalCard
               cardImg={product.firstImg}
               title={product.title}
-              price={`Bdt ${product.price}`}
+              price={product.price}
             />
           </div>
         ))}

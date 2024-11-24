@@ -14,24 +14,28 @@ const CustomerService = () => {
             <div className="flex gap-3">
               <LiaShippingFastSolid className="text-3xl" />
               <div>
-                <p className="text-xl">Free Shipping</p>
-                <p className="text-sm">Buy bdt 3000+ & get free delivery</p>
+                <p className="md:text-xl">Free Shipping</p>
+                <p className="text-sm mt-1">
+                  Buy bdt 3000+ & get free delivery
+                </p>
               </div>
             </div>
-            <div className="flex gap-3 mt-3 md:mt-0">
-              <BsArrowRepeat className="text-3xl" />
+            <div className="flex gap-3 mt-4 md:mt-0">
+              <BsArrowRepeat className="text-4xl" />
               <div>
-                <p className="text-xl">7 days exchange</p>
-                <p className="text-sm">
+                <p className="md:text-xl">7 days exchange</p>
+                <p className="text-sm mt-1">
                   exchange within 7 days with similar type of products
                 </p>
               </div>
             </div>
-            <div className="flex gap-3 mt-3 md:mt-0">
+            <div className="flex gap-3 mt-4 md:mt-0">
               <FaHandHoldingUsd className="text-3xl" />
               <div>
-                <p className="text-xl">100% payment secure</p>
-                <p className="text-sm">cash on delivery an secured payment</p>
+                <p className="md:text-xl">100% payment secure</p>
+                <p className="text-sm mt-1">
+                  cash on delivery an secured payment
+                </p>
               </div>
             </div>
           </div>

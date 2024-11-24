@@ -1,10 +1,6 @@
 "use client";
 import Container from "@/components/utils/Container";
-import React, { useState } from "react";
-import hoodie01 from "../../../../assets/images/productImg/hoodie01.png";
-import hoodie02 from "../../../../assets/images/productImg/hoodie02.png";
-import hoodie03 from "../../../../assets/images/productImg/hoodie03.png";
-import hoodie05 from "../../../../assets/images/productImg/hoodie05.png";
+import React, { useEffect, useState } from "react";
 import AddToCartBtn from "@/components/utils/CommonBtn/AddToCartBtn";
 import Review from "@/components/Review/Review";
 import RelatedProduct from "@/components/RelatedProduct/RelatedProduct";
@@ -13,23 +9,31 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "./productid.css";
 import { useProductContext } from "@/Provider/Provider";
+import { Rating, RoundedStar } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const ProductDetails = ({ params }) => {
   const { productid } = React.use(params);
   const [quantity, setQuantity] = useState(1);
+  const [showThumbnails, setShowThumbnails] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const { products } = useProductContext();
   const product = products.find((item) => item._id === productid);
-
+  // rating
+  const [rating, setRating] = useState(4);
+  const myStyles = {
+    itemShapes: RoundedStar,
+    activeFillColor: "#FFCF11",
+    inactiveFillColor: "#DFDFDF",
+  };
   const handleDecrement = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
-
   const handleIncrement = () => {
     setQuantity(quantity + 1);
   };
-
   const images = [
     {
       original: product?.firstImg,
@@ -48,7 +52,6 @@ const ProductDetails = ({ params }) => {
       thumbnail: product?.firstImg,
     },
   ];
-
   const customLeftNav = (onClick, disabled) => (
     <button
       className={`custom-slider-nav left-nav ${disabled ? "disabled" : ""}`}
@@ -57,7 +60,6 @@ const ProductDetails = ({ params }) => {
       <GoArrowLeft />
     </button>
   );
-
   const customRightNav = (onClick, disabled) => (
     <button
       className={`custom-slider-nav right-nav ${disabled ? "disabled" : ""}`}
@@ -67,13 +69,32 @@ const ProductDetails = ({ params }) => {
     </button>
   );
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setShowThumbnails(false);
+      } else {
+        setShowThumbnails(true);
+      }
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  const handleSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
   return (
     <Container>
-      <p className="font-medium mt-10">
+      <p className="font-medium mt-10 px-5 md:px-0">
         Feature Product / <span className="text-purple-600">New Arrival</span>
       </p>
-      <div className="grid grid-cols-2 gap-10 mt-10">
-        <div>
+      <div className="md:grid grid-cols-2 gap-10 mt-10 px-5 md:px-0">
+        <div className="relative">
           <ImageGallery
             items={images}
             renderLeftNav={customLeftNav}
@@ -81,18 +102,29 @@ const ProductDetails = ({ params }) => {
             showPlayButton={false}
             showFullscreenButton={false}
             thumbnailPosition="bottom"
+            showThumbnails={showThumbnails}
+            onSlide={handleSlide}
           />
+          <div className="md:hidden absolute bottom-4 right-4 bg-purple-200 px-5 py-2 rounded-full text-sm">
+            {currentIndex + 1}/{images.length}
+          </div>
         </div>
 
         <div>
-          <button className="py-2 px-12 rounded-lg bg-purple-950 text-white">
+          <button className="py-2 px-12 rounded-lg bg-purple-950 text-white mt-3 md:mt-0">
             New Arrival
           </button>
           <h3 className="text-3xl font-semibold mt-5">{product?.title}</h3>
-          <p className="text-[#FFC700] text-xl mt-5">
-            ★★★★★ <span className="text-black">(4.0)</span>
+          <div className="text-[#FFC700] text-xl mt-5 flex items-center">
+            <Rating
+              style={{ maxWidth: 120 }}
+              value={rating}
+              onChange={setRating}
+              itemStyles={myStyles}
+            />{" "}
+            <span className="text-black text-base">(4.0)</span>
             <span className="text-purple-600 ps-3">121 reviews</span>
-          </p>
+          </div>
           <p className="text-2xl font-semibold uppercase mt-5">BDT 2500</p>
           <div className="border border-dotted mt-9"></div>
           <div className="flex justify-between mt-7">
@@ -113,7 +145,7 @@ const ProductDetails = ({ params }) => {
                 </button>
               </div>
             </div>
-            <div>
+            <div className="hidden md:block">
               <h5 className="text-xl font-semibold">Available Color</h5>
               <div className="flex gap-3 mt-5">
                 <div className="flex items-center gap-3">

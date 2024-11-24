@@ -7,10 +7,8 @@ import Container from "../utils/Container";
 const RelatedProduct = () => {
   return (
     <Container>
-      <div className="mt-24">
-        <div className="flex justify-between">
-          <p className="text-2xl font-semibold">Related Products</p>
-        </div>
+      <div className="mt-24 px-5 md:px-0">
+        <p className="text-2xl font-semibold">Related Products</p>
       </div>
       {/* slider */}
       <div>

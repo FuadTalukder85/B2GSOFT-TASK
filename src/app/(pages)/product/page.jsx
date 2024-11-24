@@ -14,7 +14,6 @@ const ProductPage = () => {
           <Link href={`/product/${product._id}`} key={product._id}>
             <ProductCard
               productImg={product.firstImg}
-              review="★★★★★"
               totalReview="50"
               productTitle={product.title}
               productPrice={product.price}

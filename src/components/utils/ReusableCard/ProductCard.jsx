@@ -1,13 +1,22 @@
 import Image from "next/image";
 import AddToCartBtn from "../CommonBtn/AddToCartBtn";
+import { Rating, RoundedStar } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
+import { useState } from "react";
 
 const ProductCard = ({
   productImg,
-  review,
   totalReview,
   productTitle,
   productPrice,
 }) => {
+  const [rating, setRating] = useState(4);
+  const myStyles = {
+    itemShapes: RoundedStar,
+    activeFillColor: "#FFCF11",
+    inactiveFillColor: "#DFDFDF",
+  };
+
   return (
     <div>
       <div className="bg-white p-2 rounded-2xl m-3 mt-10">
@@ -27,10 +36,15 @@ const ProductCard = ({
             </div>
           </div>
         </div>
-        <p className="mt-3">
-          <span className="text-[#FFC700] text-xl">{review}</span>
-          <span className="text-xl ps-2">({totalReview})</span>
-        </p>
+        <div className="mt-3 flex">
+          <Rating
+            style={{ maxWidth: 100 }}
+            value={rating}
+            onChange={setRating}
+            itemStyles={myStyles}
+          />
+          <span className="ps-2">({totalReview})</span>
+        </div>
         <div className="flex justify-between mt-1">
           <p>{productTitle}</p>
           <p className="text-lg font-semibold uppercase">bdt {productPrice}</p>

@@ -85,7 +85,6 @@ const BigDeal = () => {
             <div key={product._id} className="relative">
               <ProductCard
                 productImg={product.firstImg}
-                review="★★★★★"
                 totalReview="50"
                 productTitle={product.title}
                 productPrice={product.price}

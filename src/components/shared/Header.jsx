@@ -4,16 +4,17 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 import logo from "../../assets/images/we5ive_logo.png";
 import { CiSearch } from "react-icons/ci";
-import { BsBasket3 } from "react-icons/bs";
-import { BiUser } from "react-icons/bi";
 import Link from "next/link";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
 import userIcon from "../../assets/icons/user.png";
 import shoppingIcon from "../../assets/icons/shopping.png";
 import gsap from "gsap";
+import { usePathname } from "next/navigation";
+
 const Header = () => {
-  // gsap
+  const pathname = usePathname();
+  // gsap animation for menu
   useEffect(() => {
     const menuBtn = document.querySelector("#menu");
     const menuStyle = document.querySelector("#menuStyle");
@@ -45,10 +46,26 @@ const Header = () => {
       }
     }
   }, []);
+
+  // dynamic active link
+  const getDynamicLink = (path) => {
+    if (pathname === path) {
+      return "text-purple-500";
+    }
+    if (
+      pathname.startsWith("/product") &&
+      (path === "/product" || path === "/product/[id]")
+    ) {
+      return "text-purple-500";
+    }
+    return "text-gray-500";
+  };
+
   return (
     <div className="bg-purple-50 py-5">
       <Container>
         <div className="flex justify-between items-center px-5 md:px-0">
+          {/* responsive header */}
           <div className="md:hidden flex items-center gap-2">
             <div>
               <div id="menu">
@@ -71,11 +88,18 @@ const Header = () => {
                   </button>
                 </div>
                 <ul className="mt-3 text-gray-500">
-                  <li>
-                    <Link href="/">Home</Link>
+                  <li className="font-semibold">
+                    <Link href="/" className={getDynamicLink("/")}>
+                      Home
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/product">Shop</Link>
+                    <Link
+                      href="/product"
+                      className={getDynamicLink("/product")}
+                    >
+                      Shop
+                    </Link>
                   </li>
                   <li>Deals</li>
                   <li>What's New</li>
@@ -91,12 +115,16 @@ const Header = () => {
           </Link>
 
           <div className="hidden md:block">
-            <ul className="flex gap-5 font-normal text-gray-500">
+            <ul className="flex gap-5 font-semibold text-gray-500">
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/" className={getDynamicLink("/")}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link href="/product">Shop</Link>
+                <Link href="/product" className={getDynamicLink("/product")}>
+                  Shop
+                </Link>
               </li>
               <li>Deals</li>
               <li>What's New</li>

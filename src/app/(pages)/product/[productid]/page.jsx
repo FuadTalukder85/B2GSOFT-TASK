@@ -10,7 +10,9 @@ import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import "./productid.css";
 import { useProductContext } from "@/Provider/Provider";
 import { Rating, RoundedStar } from "@smastrom/react-rating";
+import bagIcon from "../../../../assets/icons/shopping02.png";
 import "@smastrom/react-rating/style.css";
+import Image from "next/image";
 
 const ProductDetails = ({ params }) => {
   const { productid } = React.use(params);
@@ -157,6 +159,13 @@ const ProductDetails = ({ params }) => {
                   <span>Black</span>
                 </div>
               </div>
+            </div>
+            <div className="hidden md:block absolute right-0 w-24 h-24 rounded-l-xl bg-[#581FC1] text-white text-center text-sm font-semibold py-4">
+              <div className="flex justify-center">
+                <Image src={bagIcon} alt="bagIcon"></Image>
+              </div>
+              <p className="mt-1">Your bag</p>
+              <p>0</p>
             </div>
           </div>
           <div className="border border-dotted mt-9"></div>

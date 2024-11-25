@@ -2,11 +2,11 @@ import Image from "next/image";
 const NewArrivalCard = ({ cardImg, title, price }) => {
   return (
     <div>
-      <div className="bg-white rounded-2xl p-2 mt-10 mx-3">
+      <div className="bg-white rounded-2xl p-2 mt-10 m-3">
         <div className="bg-[#F6F5FD] overflow-hidden rounded-xl">
           <div className="relative flex items-center justify-center h-[260px] overflow-hidden">
             <Image
-              className="absolute px-3 bottom-0 rounded-xl"
+              className="absolute px-3 bottom-0 rounded-xl hover:scale-110 transition-all duration-700"
               src={cardImg}
               alt="cardImg"
               width={400}

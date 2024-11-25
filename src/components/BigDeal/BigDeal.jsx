@@ -60,7 +60,7 @@ const BigDeal = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.04,
+          slidesToShow: 1.07,
           slidesToScroll: 1,
           rows: 1,
           infinite: true,

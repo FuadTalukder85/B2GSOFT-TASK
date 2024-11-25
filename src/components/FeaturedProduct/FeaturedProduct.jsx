@@ -16,10 +16,7 @@ const FeaturedProduct = () => {
         </div>
       </div>
       {/* Slider */}
-      <div className="">
-        <CommonSlider></CommonSlider>
-      </div>
-      {/* </div> */}
+      <CommonSlider></CommonSlider>
       <div>
         <SeeMoreBtn></SeeMoreBtn>
       </div>

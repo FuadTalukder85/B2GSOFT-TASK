@@ -40,9 +40,9 @@ const Footer = () => {
                   <input
                     type="text"
                     placeholder="Youe email address"
-                    className="p-2 md:p-4 w-56 md:w-[435px] rounded-s-lg"
+                    className="p-2 md:px-4 md:py-3 w-56 md:w-[435px] rounded-s-lg"
                   />
-                  <button className="p-2 md:p-4 bg-purple-600 md:w-36 rounded-e-lg">
+                  <button className="p-2 md:px-4 md:py-3 bg-purple-600 md:w-36 rounded-e-lg">
                     Subscribe
                   </button>
                 </div>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
           {/* middle footer */}
-          <div className="md:flex justify-between mt-16">
+          <div className="md:flex justify-between mt-5 md:mt-16">
             <ul>
               <li className="font-bold pb-1 text-sm md:text-base">
                 Contact Us

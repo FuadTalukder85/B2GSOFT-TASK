@@ -19,8 +19,10 @@ const ProductDetails = ({ params }) => {
   const [quantity, setQuantity] = useState(1);
   const [showThumbnails, setShowThumbnails] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeSize, setActiveSize] = useState("S");
   const { products } = useProductContext();
   const product = products.find((item) => item._id === productid);
+  const sizes = ["S", "M", "L", "XL"];
   // rating
   const [rating, setRating] = useState(4);
   const myStyles = {
@@ -107,7 +109,7 @@ const ProductDetails = ({ params }) => {
             showThumbnails={showThumbnails}
             onSlide={handleSlide}
           />
-          <div className="md:hidden absolute bottom-4 right-4 bg-purple-200 px-5 py-2 rounded-full text-sm">
+          <div className="md:hidden absolute bottom-4 right-4 bg-[#E0DCF8] px-5 py-2 rounded-full text-sm">
             {currentIndex + 1}/{images.length}
           </div>
         </div>
@@ -116,7 +118,9 @@ const ProductDetails = ({ params }) => {
           <button className="py-2 px-12 rounded-lg bg-purple-950 text-white mt-3 md:mt-0">
             New Arrival
           </button>
-          <h3 className="text-3xl font-semibold mt-5">{product?.title}</h3>
+          <h3 className="text-lg md:text-3xl font-semibold mt-5">
+            {product?.title}
+          </h3>
           <div className="text-[#FFC700] text-xl mt-5 flex items-center">
             <Rating
               style={{ maxWidth: 120 }}
@@ -125,26 +129,28 @@ const ProductDetails = ({ params }) => {
               itemStyles={myStyles}
             />{" "}
             <span className="text-black text-base">(4.0)</span>
-            <span className="text-purple-600 ps-3">121 reviews</span>
+            <span className="text-purple-600 ps-3 text-base">121 reviews</span>
           </div>
           <p className="text-2xl font-semibold uppercase mt-5">BDT 2500</p>
           <div className="border border-dotted mt-9"></div>
           <div className="flex justify-between mt-7">
             <div>
               <h5 className="text-xl font-semibold">Available Size</h5>
+              {/* product size button */}
               <div className="flex gap-5 mt-5">
-                <button className="block w-10 h-10 bg-purple-50 border border-purple-600 rounded-lg">
-                  S
-                </button>
-                <button className="block w-10 h-10 bg-purple-50 rounded-lg">
-                  M
-                </button>
-                <button className="block w-10 h-10 bg-purple-50 rounded-lg">
-                  L
-                </button>
-                <button className="block w-10 h-10 bg-purple-50 rounded-lg">
-                  XL
-                </button>
+                {sizes.map((size) => (
+                  <button
+                    key={size}
+                    onClick={() => setActiveSize(size)}
+                    className={`block w-10 h-10 bg-purple-50 rounded-lg ${
+                      activeSize === size
+                        ? "border-2 border-purple-600"
+                        : "border-none"
+                    }`}
+                  >
+                    {size}
+                  </button>
+                ))}
               </div>
             </div>
             <div className="hidden md:block">
@@ -181,7 +187,7 @@ const ProductDetails = ({ params }) => {
               </span>
             </div>
           </div>
-          <div className="flex gap-3 mt-7">
+          <div className="md:flex gap-3 mt-7">
             <button className="mt-3 py-2 w-full bg-purple-600 rounded-lg font-semibold text-white hover:bg-purple-700 transition-all duration-700">
               Buy Now
             </button>
@@ -189,7 +195,7 @@ const ProductDetails = ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="mt-16">
+      <div className="mt-10">
         <Review />
       </div>
       <RelatedProduct />

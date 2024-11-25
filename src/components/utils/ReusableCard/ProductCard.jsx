@@ -9,7 +9,7 @@ const ProductCard = ({
   productTitle,
   productPrice,
 }) => {
-  const [rating, setRating] = useState(4);
+  const [rating, setRating] = useState(3);
   const myStyles = {
     itemShapes: RoundedStar,
     activeFillColor: "#FFCF11",
@@ -22,7 +22,7 @@ const ProductCard = ({
         <div className="bg-[#F6F5FD] rounded-lg">
           <div className="relative flex items-center justify-center h-[260px] overflow-hidden">
             <Image
-              className="absolute px-3 bottom-0 rounded-lg"
+              className="absolute px-3 bottom-0 rounded-lg hover:scale-110 transition-all duration-700"
               src={productImg}
               alt="productImg"
               width={400}

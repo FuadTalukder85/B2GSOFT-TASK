@@ -5,6 +5,7 @@ import { BiLike } from "react-icons/bi";
 import { Rating, RoundedStar } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 import { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 const Review = () => {
   const [rating, setRating] = useState(4);
   const myStyles = {
@@ -16,23 +17,25 @@ const Review = () => {
   return (
     <div className="mt-5 px-5 md:px-0">
       {/* Tabs */}
-      <div className="flex gap-10 md:gap-16 text-sm font-semibold">
+      <div className="flex gap-7 md:gap-16 font-semibold">
         <button className="text-gray-500">Details</button>
         <button className="text-purple-500">Rating & Review</button>
         <button className="text-gray-500">Discussion</button>
       </div>
 
-      <div className="flex flex-col md:flex-row justify-between mt-6 gap-8">
+      <div className="flex flex-col md:flex-row justify-between mt-5 md:mt-10 gap-8">
         {/* Reviews Section */}
         <div className="order-2 md:order-1">
-          <div className="mb-4">
-            <select className="bg-transparent border border-purple-600 rounded-lg px-3 py-2 text-sm focus:outline-none">
+          <div className="md:mb-4 relative w-24">
+            <select className="bg-transparent border border-purple-600 rounded-lg px-3 py-2 text-sm focus:outline-none appearance-none w-24">
               <option value="newest">Newest</option>
               <option value="old">Old</option>
             </select>
+            <span className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+              <IoIosArrowDown />
+            </span>
           </div>
-
-          {/* Individual Review */}
+          {/* review given */}
           <div>
             <div className="flex gap-2 mt-8">
               <Image

@@ -58,7 +58,7 @@ const CommonSlider = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.05,
+          slidesToShow: 1.04,
           slidesToScroll: 1,
           infinite: true,
           dots: false,

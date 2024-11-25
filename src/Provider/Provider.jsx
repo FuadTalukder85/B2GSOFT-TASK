@@ -15,7 +15,6 @@ export const Provider = ({ children }) => {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Data fetching error", error));
   }, []);
-  // Filter products tagged as "featured"
   const filterFeatured = products.filter(
     (product) => product.tag === "featured"
   );
